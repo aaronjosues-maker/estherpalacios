@@ -28,6 +28,11 @@ body {
     overflow: auto; /* allow scrolling on small devices */
 }
 
+html, body {
+  touch-action: pan-x pan-y; /* Permite desplazarse pero no hacer pinch-zoom */
+  overscroll-behavior: none; /* Previene efectos de rebote */
+}
+
 #game-container {
     width: 100%;
     max-width: 600px;
