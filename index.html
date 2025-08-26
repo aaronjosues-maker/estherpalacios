@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayLingua - ¡Aprende Inglés!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="start-screen">
+        <img src="mascot.png" alt="Mascot" class="start-mascot">
+        <h1>¡Bienvenido a PlayLingua!</h1>
+        <p>Escribe tu nombre para empezar.</p>
+        <input type="text" id="name-input" placeholder="Tu nombre" maxlength="15">
+        <p>Elige tu avatar:</p>
+        <div id="avatar-selection">
+            <div class="avatar-option" data-avatar="boy.png">
+                <img src="boy.png" alt="Boy">
+            </div>
+            <div class="avatar-option" data-avatar="girl.png">
+                <img src="girl.png" alt="Girl">
+            </div>
+        </div>
+        <button id="start-btn" disabled>Empezar a Aprender</button>
+        <footer>Esther Palacios</footer>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <header>
+            <div id="stats-container">
+                <div id="player-info">
+                    <img id="player-avatar" src="boy.png" alt="Player Avatar">
+                    <span id="player-name"></span>
+                </div>
+                <div id="coin-container">
+                    <img src="coin.png" alt="Coins">
+                    <span id="coin-count">0</span>
+                </div>
+                <div id="timer-container">
+                    <div id="timer-bar"></div>
+                </div>
+            </div>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+        </header>
+
+        <main id="lesson-container">
+            <div class="mascot-and-prompt">
+                <img src="mascot.png" alt="Friendly Mascot" id="mascot">
+                <div id="prompt-bubble">
+                    <p id="prompt-text"></p>
+                </div>
+            </div>
+
+            <div id="options-container">
+                <!-- Options will be dynamically inserted here -->
+            </div>
+             <button id="restart-btn" class="hidden">Reiniciar Juego</button>
+        </main>
+
+        <footer id="footer-container">
+            <div id="feedback-container">
+                <div id="feedback-content">
+                    <h2 id="feedback-title"></h2>
+                    <p id="feedback-text"></p>
+                </div>
+                <button id="continue-btn" class="hidden">Continuar</button>
+            </div>
+            <button id="check-btn" disabled>Revisar</button>
+        </footer>
+
+    </div>
+
+    <button id="mute-btn">🔇</button>
+    <audio id="bg-music" src="background_music.mp3" loop></audio>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "canvas-confetti": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.module.mjs"
+        }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
